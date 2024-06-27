@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+        <div class="flex items-center justify-between mb-4">
+            <button class="text-gray-500 hover:text-gray-800">
+                <span>&larr;</span>
+            </button>
+            <a href="#" class="text-purple-600 hover:underline">Enroll Now</a>
+        </div>
+       
+        <h2 class="text-2xl font-bold text-purple-600 text-center text-5xl -rotate-12 mb-2">E</h2>
+       
+        <h2 class="text-2xl font-bold text-purple-600 text-center mb-2">Early Skills</h2>
+        <h3 class="text-xl text-center text-gray-800 mb-2" id="form-title">Welcome back!</h3>
+        <p class="text-center text-gray-600 mb-4" id="form-subtitle">Log in to continue Learning</p>
+
+        <!-- Login Form -->
+        <form id="login-form">
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700">Email Id</label>
+                <input type="email" id="login-email" name="email"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                    placeholder="ayushi.c@gmail.com" required>
+            </div>
+            <div class="mb-4 relative">
+                <label for="password" class="block text-gray-700">Password</label>
+                <input type="password" id="password" name="password"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                    placeholder="**************" required>
+                <button type="button" class="absolute right-2 top-9 text-gray-500 hover:text-gray-800">
+                    <span>👁️</span>
+                </button>
+            </div>
+            <div class="text-right mb-6">
+                <a href="#" class="text-purple-600 hover:underline" onclick="showForgotPasswordForm()">Forgot
+                    Password?</a>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+                <hr class="w-full border-gray-300">
+                <span class="px-2 text-gray-500">Or</span>
+                <hr class="w-full border-gray-300">
+            </div>
+            <div class="mb-6 text-center">
+                <a href="#" class="text-purple-600 hover:underline">Continue with phone number</a>
+            </div>
+            <div>
+                <button type="submit" class="w-full py-2 px-4 bg-purple-300 text-white rounded-md shadow"
+                    disabled>Continue</button>
+            </div>
+        </form>
+
+        <!-- Forgot Password Form -->
+        <form id="forgot-password-form" class="hidden">
+            <div class="mb-4">
+                <label for="forgot-email" class="block text-gray-700">Email Id</label>
+                <input type="email" id="forgot-email" name="email"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                    placeholder="ayushi.c@gmail.com" required>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+                <hr class="w-full border-gray-300">
+                <span class="px-2 text-gray-500">Or</span>
+                <hr class="w-full border-gray-300">
+            </div>
+            <div class="mb-6 text-center">
+                <a href="#" class="text-purple-600 hover:underline">Continue with phone number</a>
+            </div>
+            <div>
+                <button type="submit"
+                    class="w-full py-2 px-4 bg-gradient-to-r from-purple-500 to-purple-700 text-white rounded-md shadow hover:from-purple-600 hover:to-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+    
+
+        function showForgotPasswordForm() {
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('forgot-password-form').classList.remove('hidden');
+          
+        }
+    </script>
+</body>
+
+</html>
